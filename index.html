@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/tarjeta-de-credito.png" type="image/x-icon">
+    <title>Detalles de Pago</title>
+    <link rel="stylesheet" href="diseño.css">
+  </head>
+  <body>
+    <main class="contenedor">
+      <section class="ui">
+        <div class="contenedor-left">
+          <form id="tarjeta-credito">
+            <div class="numero-contenedor">
+              <label>Numero de Tarjeta</label>
+              <input
+                type="text"
+                name="numero-tarjeta"
+                id="numero-tarjeta"
+                maxlength="19"
+                placeholder="1243 5678 9101 1121"
+                required
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              />
+            </div>
+            <div class="nombre-contenedor">
+              <label>Dueño de Tarjeta</label>
+              <input
+                type="text"
+                name="nombre-texto"
+                id="nombre-texto"
+                maxlength="30"
+                placeholder="JAVIER LOPEZ"
+                required
+                onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '"
+              />
+            </div>
+            <div class="info-contenedor">
+              <div class="expiracion-contenedor">
+                <label>Fecha Expiracion</label>
+                <input
+                  type="text"
+                  name="Fecha-tarjeta"
+                  id="Fecha-tarjeta"
+                  maxlength="5"
+                  placeholder="06/24"
+                  required
+                />
+              </div>
+              <div class="cvv-contenedor">
+                <label>CVV</label>
+                <input
+                  type="text"
+                  name="cvv-texto"
+                  id="cvv-texto"
+                  maxlength="3"
+                  placeholder="234"
+                  required
+                  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                />
+              </div>
+            </div>
+            <input type="submit" value="PAGAR" id="add" />
+          </form>
+        </div>
+        <div class="contenedor-derecho">
+          <div class="card">
+            <div class="interno">
+                <img class="wireless" src="img/wifi.png" alt="icono inalambrico">
+                <div class="card-number">
+                  <div class="numero-vl">
+                    1234 5678 1235 1232
+                  </div>
+                </div>
+                <div class="card-holder">
+                   <label for="">Dueño</label>
+                   <div class="nombre-texto">Anthony Lang</div>
+                </div>
+                <div class="card-infos">
+                   <div class="exp">
+                     <label>Fecha Expiracion</label>
+                     <div class="expiracion">05/25</div>
+                   </div>
+                   <div class="cvv">
+                       <label>CVV</label>
+                       <div class="cvv-texto">123</div>
+                   </div>
+                </div>
+                <div class="infos">
+                  <img class="chip" src="img/chip.png" alt="chip tarjeta">
+                  <img class="chip" src="img/visa.png" alt="visa">
+                </div>
+               
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
