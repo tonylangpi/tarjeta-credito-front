@@ -9,6 +9,7 @@ const cardNumberText = document.querySelector(".numero-vl");
 const cardHolderText = document.querySelector(".nombre-texto");
 const cardExpirationText = document.querySelector(".expiracion");
 const cardCVVText = document.querySelector(".cvv-texto");
+const cardCVVTextAtras = document.querySelector(".cvv-atras");
 
 cardNumber.addEventListener("keyup", (e) => {
     if (!e.target.value) {
@@ -57,8 +58,10 @@ cardExpiration.addEventListener("keyup", (e) => {
 cardCVV.addEventListener("keyup", (e) => {
     if (!e.target.value) {
         cardCVVText.innerHTML = "123";
+        cardCVVTextAtras.innerHTML = "235";
     } else {
         cardCVVText.innerHTML = e.target.value;
+        cardCVVTextAtras.innerHTML = e.target.value;
     }
 })
 
